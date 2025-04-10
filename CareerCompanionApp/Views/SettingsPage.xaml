@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<maui:ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:CareerCompanionApp.ViewModels"
+             xmlns:maui="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:compatibility="clr-namespace:Microsoft.Maui.Controls.Compatibility;assembly=Microsoft.Maui.Controls"
+             xmlns:diagnostics="clr-namespace:System.Diagnostics;assembly=System.Diagnostics.TraceSource"
+             xmlns:emit="clr-namespace:System.Reflection.Emit;assembly=System.Reflection.Emit.ILGeneration"
+             x:Class="CareerCompanionApp.Views.SettingsPage">
+
+    <!-- Set BindingContext in SettingsPage.xaml.cs or remove the BindingContext here and set in code-behind -->
+
+    <compatibility:StackLayout Padding="20">
+
+        <!-- Sound Setting -->
+        <maui:Label Text="Sound" FontSize="Large" />
+        <maui:Switch IsToggled="{maui:Binding IsSoundEnabled}" />
+
+        <!-- Notifications Setting -->
+        <maui:Label Text="Notifications" FontSize="Large" />
+        <maui:Switch IsToggled="{maui:Binding AreNotificationsEnabled}" />
+
+        <!-- Dark Mode Setting -->
+        <maui:Label Text="Dark Mode" FontSize="Large" />
+        <maui:Switch IsToggled="{maui:Binding IsDarkModeEnabled}" />
+
+        <!-- Language Setting -->
+        <maui:Label Text="Language" FontSize="Large" />
+        <maui:Picker ItemsSource="{maui:Binding AvailableLanguages}"
+                SelectedItem="{maui:Binding SelectedLanguage}" />
+
+        <!-- Privacy Setting -->
+        <maui:Label Text="Allow Data Collection" FontSize="Large" />
+        <maui:Switch IsToggled="{maui:Binding IsDataCollectionAllowed}" />
+
+        <!-- Logout Button -->
+        <maui:Button Text="Log Out" Command="{maui:Binding LogoutCommand}" />
+
+    </compatibility:StackLayout>
+
+</maui:ContentPage>

@@ -1,0 +1,34 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CareerCompanionApp.ViewModels"
+             xmlns:viewModel="clr-namespace:CareerCompanionApp.ViewModel"
+             x:Class="CareerCompanionApp.Views.JobSearchPage"
+             Title="Job Search">
+
+    <ContentPage.BindingContext>
+        <viewModel:JobSearchViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="12">
+        <Entry Placeholder="Search for jobs..." Text="{Binding SearchQuery}" />
+        <Button Text="Search" Command="{Binding SearchJobsCommand}" />
+
+        <CollectionView ItemsSource="{Binding JobResults}" Margin="0,20,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray" Margin="5" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18" />
+                            <Label Text="{Binding Company}" FontSize="14" />
+                            <Label Text="{Binding Location}" FontSize="14" />
+                            <Label Text="{Binding Description}" FontSize="12" />
+                            <Button Text="View Job"
+                                    CommandParameter="{Binding Url}"
+                                    Clicked="OnViewJobClicked" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

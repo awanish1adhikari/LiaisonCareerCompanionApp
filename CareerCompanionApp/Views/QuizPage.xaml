@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CareerCompanionApp.ViewModels"
+             xmlns:viewModel="clr-namespace:CareerCompanionApp.ViewModel"
+             x:Class="CareerCompanionApp.Views.QuizPage"
+             Title="Quiz">
+
+    <ContentPage.BindingContext>
+        <viewModel:QuizViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="{Binding CurrentQuestion.Question}" 
+                   FontSize="22" 
+                   FontAttributes="Bold"
+                   LineBreakMode="WordWrap" />
+
+            <CollectionView ItemsSource="{Binding CurrentQuestion.Options}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedOption}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Gray" Margin="5" Padding="12" CornerRadius="10">
+                            <Label Text="{Binding .}" FontSize="16" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="Submit Answer" 
+                    Command="{Binding SubmitAnswerCommand}" 
+                    BackgroundColor="#A5D6A7" />
+
+            <Button Text="Next Question" 
+                    Command="{Binding NextQuestionCommand}" 
+                    BackgroundColor="#90CAF9" />
+
+            <Label Text="Score: {Binding Score}" 
+                   FontSize="16" 
+                   HorizontalOptions="End" 
+                   FontAttributes="Bold" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

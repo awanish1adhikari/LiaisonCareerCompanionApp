@@ -1,0 +1,67 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CareerCompanionApp.ViewModels"
+             x:Class="CareerCompanionApp.Views.ResumePage"
+             x:Name="ResumePageRef"
+             Title="Resume Builder">
+
+    <ContentPage.BindingContext>
+        <vm:ResumeViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <!-- Header -->
+            <Label Text="Create or Edit Resume"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+
+            <!-- Resume Form -->
+            <Entry Placeholder="Full Name" Text="{Binding Resume.FullName}" />
+            <Editor Placeholder="Education" Text="{Binding Resume.Education}" AutoSize="TextChanges" />
+            <Editor Placeholder="Experience" Text="{Binding Resume.Experience}" AutoSize="TextChanges" />
+            <Editor Placeholder="Skills" Text="{Binding Resume.Skills}" AutoSize="TextChanges" />
+
+            <Button Text="Save Resume" Command="{Binding SaveResumeCommand}" />
+
+            <!-- Divider -->
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,10" />
+            <Label Text="Your Resumes" FontSize="20" FontAttributes="Bold" />
+
+            <!-- Resume List with Edit/Delete Swipe -->
+            <CollectionView ItemsSource="{Binding Resumes}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedResume}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItem Text="Edit"
+                                               BackgroundColor="LightBlue"
+                                               Command="{Binding BindingContext.SaveResumeCommand, Source={x:Reference ResumePageRef}}"
+                                               CommandParameter="{Binding .}" />
+                                    <SwipeItem Text="Delete"
+                                               BackgroundColor="IndianRed"
+                                               Command="{Binding BindingContext.DeleteResumeCommand, Source={x:Reference ResumePageRef}}"
+                                               CommandParameter="{Binding .}" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="5">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding FullName}" FontAttributes="Bold" FontSize="18" />
+                                    <Label Text="{Binding Education}" FontSize="13" />
+                                    <Label Text="{Binding Experience}" FontSize="13" />
+                                    <Label Text="{Binding Skills}" FontSize="13" />
+                                </VerticalStackLayout>
+                            </Frame>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

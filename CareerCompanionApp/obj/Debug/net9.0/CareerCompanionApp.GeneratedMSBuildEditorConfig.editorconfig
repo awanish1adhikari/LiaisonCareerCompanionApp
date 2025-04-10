@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CareerCompanionApp
+build_property.ProjectDir = C:\Users\asus\RiderProjects\CareerCompanionApp\CareerCompanionApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Views/DashboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Views.DashboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DashboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DashboardPage.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Views/JobSearchPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Views.JobSearchPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\JobSearchPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\JobSearchPage.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Views/QuizPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Views.QuizPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\QuizPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\QuizPage.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Views/ResumePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Views.ResumePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ResumePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ResumePage.xaml
+
+[C:/Users/asus/RiderProjects/CareerCompanionApp/CareerCompanionApp/Views/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CareerCompanionApp.Views.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SettingsPage.xaml
